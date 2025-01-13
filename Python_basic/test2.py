@@ -21,3 +21,14 @@ a.print_info()
 b = School("bmt", "MDY")
 b.print_info()
 
+class Teacher(School):
+    def __init__(self, name, address, teacher_id):
+        super().__init__(name, address)
+        self.teacher_id = teacher_id
+
+    def print_info(self):
+        super().print_info()
+        print(f"Teacher id: {self.teacher_id}")
+        
+c = Teacher("aung", "MDY", "20210001")
+c.print_info()
