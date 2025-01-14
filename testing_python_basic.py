@@ -62,18 +62,49 @@
 # p1.mykids()
 
 
-class Person:
-    def __init__(self,fname,lname):
-        self.firstname = fname
-        self.lastname = lname
+# class Person:
+#     def __init__(self,fname,lname):
+#         self.firstname = fname
+#         self.lastname = lname
 
-    def printname(self):
-        print(self.firstname, self.lastname)
+#     def printname(self):
+#         print(self.firstname, self.lastname)
         
-class Student(Person):
-    def __init__(self, fname, lname, year):
-        super().__init__(fname, lname)
-        self.graduationyear = year
+# class Student(Person):
+#     def __init__(self, fname, lname, year):
+#         super().__init__(fname, lname)
+#         self.graduationyear = year
 
-    def welcome(self):
-        print("Welcome", self.firstname, self.lastname, "to the class of", self.graduationyear)
+#     def welcome(self):
+#         print("Welcome", self.firstname, self.lastname, "to the class of", self.graduationyear)
+
+class Calculator:
+    def __init__(self,a,b):
+        self.a = a
+        self.b = b
+    def add(self):
+        return self.a + self.b
+    def minus(self):
+        return self.a - self.b
+    def multiply(self):
+        return self.a * self.b
+    def divide(self): 
+        return self.a / self.b
+    
+a =  input("Enter first number: ")
+b = input("Enter second number: ")
+c = input("Enter operation (+,-,*,/): ")
+
+if c == '+':
+    print(Calculator(int(a),int(b)).add())
+elif c == '-':
+    print(Calculator(int(a),int(b)).minus())
+elif c == '*':
+    print(Calculator(int(a),int(b)).multiply())
+elif c == '/':
+    if float(b) == 0:
+        print("Division by zero is not allowed")
+    else:
+        print(Calculator(float(a),float(b)).divide())
+else:
+    print("Invalid operation")
