@@ -1,3 +1,4 @@
+#need to learn this code
 if __name__ == '__main__':
     n = int(input())  # Number of students
     student_marks = {}
