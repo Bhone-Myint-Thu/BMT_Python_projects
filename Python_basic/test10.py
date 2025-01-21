@@ -16,4 +16,5 @@ if __name__ == '__main__':
     scores = student_marks[query_name]
     average = sum(scores) / len(scores)
     
-  
+    # Print the result with 2 decimal places
+    print(f"{average:.2f}")
