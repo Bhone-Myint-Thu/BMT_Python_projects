@@ -6,7 +6,7 @@ if __name__ == '__main__':
     for _ in range(n):
         line = input().split()
         name = line[0]  # First element is the student's name
-        scores = list(map(int, line[1:]))  # Remaining elements are their scores
+        scores = list(map(float, line[1:]))  # Remaining elements are their scores (as floats)
         student_marks[name] = scores
     
     # Query the student's name
